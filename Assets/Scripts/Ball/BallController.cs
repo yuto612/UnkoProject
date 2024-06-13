@@ -8,13 +8,7 @@ namespace unkoProject
     {
         [SerializeField] private Ball ballPrefab;
 
-        // Start is called before the first frame update
-        void Start()
-        {
-            CreateBall();
-        }
-
-        private Ball CreateBall()
+        public Ball CreateBall()
         {
             var prefab = Instantiate(ballPrefab);
             prefab.OnCollision += OnCollision;

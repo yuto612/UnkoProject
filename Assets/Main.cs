@@ -17,6 +17,7 @@ public class Main : MonoBehaviour
         topDisplay.OnStartButtonEvent += (() =>
         {
              ShowDisplay(playDisplay);
+             playDisplay.GameStart();
         });
     }
 

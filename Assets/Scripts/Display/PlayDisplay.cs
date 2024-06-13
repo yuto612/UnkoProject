@@ -1,21 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using unkoProject;
 
 public class PlayDisplay : MonoBehaviour,IDisplay
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private BallController ballController = null;
 
-    // Update is called once per frame
-    void Update()
+    public void GameStart()
     {
-        
+        ballController.CreateBall();
     }
-
 
     #region IDisplay impl
     public void Hide()
