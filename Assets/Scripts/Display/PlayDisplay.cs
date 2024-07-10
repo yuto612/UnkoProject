@@ -6,10 +6,15 @@ using unkoProject;
 public class PlayDisplay : MonoBehaviour,IDisplay
 {
     [SerializeField] private BallController ballController = null;
+    [SerializeField] private CameraController cameraController = null;
 
     public void GameStart()
     {
-        ballController.CreateBall();
+        // ボールを生成
+        var ball = ballController.CreateBall();
+        // ボールにカメラを追従
+        // カメラオブジェクト、ボールオブジェクト
+        cameraController.Follow(ball.gameObject);
     }
 
     #region IDisplay impl
